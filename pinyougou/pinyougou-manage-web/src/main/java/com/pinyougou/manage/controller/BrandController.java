@@ -20,6 +20,13 @@ public class BrandController {
 
     @GetMapping("/findAll")
     public List<TbBrand> findAll(){
-        return brandService.queryAll();
+        return brandService.findAll();
     }
+
+    @GetMapping("/testPage")
+    public List<TbBrand> testpage(Integer page,Integer rows){
+        return (List<TbBrand>) brandService.findPage(page,rows).getRows();
+    }
+
+
 }
