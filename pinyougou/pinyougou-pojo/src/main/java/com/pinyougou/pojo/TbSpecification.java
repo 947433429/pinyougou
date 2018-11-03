@@ -1,8 +1,16 @@
 package com.pinyougou.pojo;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.io.Serializable;
 
+
+@Table(name = "tb_specification")
 public class TbSpecification implements Serializable{
+
+    @Id
+    @GeneratedValue(generator = "JDBC")
     private Long id;
 
     private String specName;
