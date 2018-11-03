@@ -1,8 +1,11 @@
 package com.pinyougou.pojo;
 
+import javax.persistence.Id;
 import java.io.Serializable;
 
 public class TbBrand implements Serializable{
+
+    @Id
     private Long id;
 
     private String name;
